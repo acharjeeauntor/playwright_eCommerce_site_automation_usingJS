@@ -1,6 +1,3 @@
-// import path from 'path';
-// import AdmZip from 'adm-zip';
-
 const path = require("path")
 const AdmZip = require("adm-zip")
 
@@ -11,4 +8,3 @@ async function globalTeardown() {
     zip.writeZip(`./html-report.zip`);
 }
 module.exports = globalTeardown;
-// export default globalTeardown;

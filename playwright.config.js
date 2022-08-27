@@ -1,6 +1,3 @@
-// @ts-check
-// import { PlaywrightTestConfig } from '@playwright/test'
-// import { testConfig } from './testConfig';
 const testConfig = require("./testConfig")
 const ENV = process.env.ENV
 
