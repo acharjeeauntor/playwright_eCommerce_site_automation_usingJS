@@ -7,7 +7,7 @@
     "test": "npx playwright test --project=chrome --workers=1",
     "headed": "npx playwright test --headed --reporter=list",
     "debug": "npx playwright test --debug",
-    "singleTest": "npx playwright test orders.spec.ts --project=chrome",
+    "singleTest": "npx playwright test orders.spec.js --project=chrome",
     "endToEndTest": "npx playwright test endtoendorderproduct.spec.js --project=chrome",
     "codeGenerate": "npx playwright codegen",
     "visualComparision": "npx playwright test --grep @Visual --project=chrome",
