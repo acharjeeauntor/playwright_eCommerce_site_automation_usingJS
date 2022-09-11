@@ -20,7 +20,7 @@
 ----------------------------------------------------------
 
 ## Requirement:<br>
-1. Automate [https://letcode.in/test](https://rahulshettyacademy.com/client/) UI
+1. Automate [https://rahulshettyacademy.com/client](https://rahulshettyacademy.com/client/) UI
 
 ----------------------------------------------------------
 
@@ -37,7 +37,7 @@ The following software are required:
 
 ## Installation:
 1. Clone the repo using below URL<br>
-  [https://github.com/acharjeeauntor/Playwright_letcode.in_Automation.git](https://github.com/acharjeeauntor/playwright_eCommerce_site_automation)<br>
+  [https://github.com/acharjeeauntor/playwright_eCommerce_site_automation_usingJS.git](https://github.com/acharjeeauntor/playwright_eCommerce_site_automation_usingJS.git)<br>
 2. Navigate to folder and install npm packages using:<br>
   npm install<br>
 
@@ -45,14 +45,10 @@ The following software are required:
 
 ## Usage:
 1. For Browser Configuration, change required parameters in "playwright.config.ts".<br>
-2. For execution entire test suite of functional test on all available browsers simultaneously execute below command where "ENV" can be "functional" or "api",Test Cases are present in "tests" folder:<br>
-    npx cross-env ENV=functional npm run test:functional<br>
-3. For executing single test case on Chrome browser execute the below command, you can change the browser for execution e.g. if you want to run test cases on Firefox, you can change --project=Firefox against test:single in package.json, just make sure the browser name given matches the name given in playwright.config.ts.<br>
-    npx cross-env ENV=functional npm run test:single<br>
-4. For executing API test cases, please provide "ENV" value as "api":<br>
-    npx cross-env ENV=api npm run test:api<br>
-5. For Allure Report generation execute :<br>
-    npm run allureReport<br>
+2. To execution entire test suite of functional test on all available browsers simultaneously execute below command where "ENV" can be "functional" or "api",Test Cases are present in "tests" folder:<br>
+    npx cross-env ENV=functional npm run test<br>
+3. To run e2e test<br>
+    npx cross-env ENV=functional npm run endToEndTest<br>
 
 ----------------------------------------------------------
 ## HTML Report view for functional test:
@@ -60,6 +56,4 @@ The following software are required:
 ![Screenshot from 2022-06-23 22-40-22](https://user-images.githubusercontent.com/38497405/175352132-8df38134-219b-4f9d-b348-bd0284581a51.png)
 ![Screenshot from 2022-06-23 22-40-32](https://user-images.githubusercontent.com/38497405/175352155-6bbbcf93-5178-421f-b77c-99b536e00dab.png)
 
-
-
-
+## To See the intregation of Github Actions Video click [here](https://youtu.be/5b3cAz5THr8)
