@@ -17,10 +17,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Single Test
-      run: npx cross-env ENV=functional npm run singleTest
-    # - name: Run End-To-End Test
-    #   run: npx cross-env ENV=functional npm run endToEndTest
+    # - name: Run Single Test
+    #   run: npx cross-env ENV=functional npm run singleTest
+    - name: Run End-To-End Test
+      run: npx cross-env ENV=functional npm run endToEndTest
     - uses: actions/upload-artifact@v2
       if: always()
       with:

@@ -21,16 +21,19 @@ test.describe("End to End Product Order test", async () => {
     common.setTokenInLocalStroage(homePage.page, token)
     await homePage.page.goto("https://rahulshettyacademy.com/client")
   })
-  test("Add to cart a product from product details and complete the order", async ({ homePage, placeOrderPage, productDetailsPage, navBar, cartPage }) => {
+  test("Add to cart a product from product details and complete the order", async ({ page,homePage, placeOrderPage, productDetailsPage, navBar, cartPage }) => {
     //home-view-add to cart-cart-single (buy now)-place order-orderConfirm-order-view order-delete order
     await homePage.clickViewBtnofProductItem(endToEndProductData.ProductName)
-    const [response] = await Promise.all([
-      productDetailsPage.page.waitForResponse("https://rahulshettyacademy.com/api/ecom/user/add-to-cart"),
-      await productDetailsPage.clickAddToCartBtn()
-    ]);
-    let responseJsonData = await response.json()
-    let responseMsg = await responseJsonData.message
-    expect(await productDetailsPage.getToastMsgLocator()).toHaveText(responseMsg)
+    await page.waitForTimeout(5000)
+    // const [response] = await Promise.all([
+    //   await page.waitForResponse("https://rahulshettyacademy.com/api/ecom/user/add-to-cart"),
+    //   await productDetailsPage.clickAddToCartBtn()
+    // ]);
+    // let responseJsonData = await response.json()
+    // let responseMsg = await responseJsonData.message
+    await productDetailsPage.clickAddToCartBtn()
+
+    expect(await productDetailsPage.getToastMsgLocator()).toHaveText(endToEndProductData.productAddedSuccessMsg)
     expect(await navBar.getCartLabelCount()).toBe("1")
     await navBar.clickCartBtn()
     await cartPage.clickBuyNowBtnOfCartItem(endToEndProductData.ProductName)

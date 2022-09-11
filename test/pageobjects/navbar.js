@@ -23,7 +23,7 @@ class NavBar {
     }
 
     async getCartLabelCount(){
-     await this.page.locator(this.cartLabelSelector).waitFor()
+     await this.page.locator(this.cartLabelSelector).waitFor({timeout:15000})
         return await this.page.textContent(this.cartLabelSelector)
     }
 

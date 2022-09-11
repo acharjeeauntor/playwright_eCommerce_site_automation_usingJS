@@ -16,7 +16,7 @@ const config = {
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 10000
+    timeout: 20000
   },
   // //fullyParallel:true,
   // // Global Setup to run before all tests
@@ -26,7 +26,7 @@ const config = {
   globalTeardown: `./global-teardown`,
 
   //sets timeout for each test case
-  timeout: 10000,
+  //timeout: 10000,
 
   //number of retries if test case fails
   retries: 1,
