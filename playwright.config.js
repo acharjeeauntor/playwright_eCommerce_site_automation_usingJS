@@ -44,7 +44,7 @@ const config = {
         browserName: `chromium`,
         // @ts-ignore
         baseURL: testConfig[process.env.ENV],
-        headless: false,
+        headless: !false,
         viewport: { width: 1300, height: 620 },
         ignoreHTTPSErrors: true,
         acceptDownloads: true,
